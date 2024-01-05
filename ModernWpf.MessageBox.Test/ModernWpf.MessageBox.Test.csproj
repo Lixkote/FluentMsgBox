@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <UseWPF>True</UseWPF>
+    <StartupObject></StartupObject>
+    <TargetFrameworks>net462;net472;net7.0-windows10.0.19041.0</TargetFrameworks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ModernWpf.MessageBox\ModernWpf.MessageBox.csproj" />
+  </ItemGroup>
+
+</Project>
