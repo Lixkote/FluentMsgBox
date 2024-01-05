@@ -2,6 +2,7 @@
 Drop-In replacement for WPF MessageBox.
 Has Windows 11/WinUi3 Styles applied to it.
 Made for Startify.
+Based on: https://github.com/OpenByteDev/ModernWpf.MessageBox
 
 ## Previews:
 ![MsgBox Screenshot](https://github.com/Lixkote/FluentMsgBox/blob/main/Previews/Dark.png)
