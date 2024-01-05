@@ -17,7 +17,7 @@
   <PropertyGroup>
     <RootNamespace>ModernWpf</RootNamespace>
     <OutputType>Library</OutputType>
-    <TargetFrameworks>net462;net472;net7.0-windows10.0.19041.0</TargetFrameworks> <!--Mirroring the TargetFrameworks of ModernWpfUI-->
+    <TargetFrameworks>net462;net472;netcoreapp31;net7.0-windows10.0.19041.0</TargetFrameworks> <!--Mirroring the TargetFrameworks of ModernWpfUI-->
     <LangVersion>9.0</LangVersion>
     <NeutralLanguage>en-US</NeutralLanguage>
     <UseWPF>True</UseWPF>
@@ -35,7 +35,6 @@
   <ItemGroup>
     <PackageReference Include="MicaWPF" Version="6.2.1" />
     <PackageReference Include="ModernWpfUI" Version="0.9.4" />
-    <PackageReference Include="WPF-UI" Version="2.1.0" />
   </ItemGroup>
 
   <ItemGroup Condition="'$(TargetFramework)' == 'net48'">

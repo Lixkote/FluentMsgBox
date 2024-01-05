@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Windows;
-using Wpf.Ui.Controls;
 using MicaWPF.Controls;
 using DialogBoxCommand = ModernWpf.LocalizedDialogCommands.DialogBoxCommand;
 
 namespace ModernWpf {
-    public partial class MessageBoxWindow : UiWindow {
+    public partial class MessageBoxWindow : Window {
         public MessageBoxResult? Result = null;
         public MessageBoxWindow(string messageBoxText, string caption, MessageBoxButton button, string? symbolGlyph) {
             InitializeComponent();
@@ -89,13 +88,19 @@ namespace ModernWpf {
             InvalidateMeasure();
         }
 
-        private void UiWindow_Loaded(object sender, RoutedEventArgs e)
+        private void CustomTitleBar_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
-            Wpf.Ui.Appearance.Watcher.Watch(
-                this,                                  // Window class
-                Wpf.Ui.Appearance.BackgroundType.Mica, // Background type
-                true                                   // Whether to change accents automatically
-            );
+            this.DragMove();
+        }
+
+        private void CustomTitleBar_Loaded(object sender, RoutedEventArgs e)
+        {
+            this.MouseLeftButtonDown += delegate { DragMove(); };
+        }
+
+        private void TitlebarCloseButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }
